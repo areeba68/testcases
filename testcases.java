@@ -19,7 +19,7 @@ public class WebAppTest {
     @Test
     public void testUserRegistration() {
         // Navigate to the registration page
-        driver.get("http://your-web-app-url/register");
+        driver.get("http://localhost:8080/register");
 
         // Fill in registration form
         driver.findElement(By.id("name")).sendKeys("John Doe");
@@ -33,7 +33,7 @@ public class WebAppTest {
     @Test
     public void testUserLogin() {
         // Navigate to the login page
-        driver.get("http://your-web-app-url/login");
+         driver.get("http://localhost:8080/login");
 
         // Fill in login form
         driver.findElement(By.id("email")).sendKeys("john@example.com");
@@ -45,7 +45,7 @@ public class WebAppTest {
     @Test
     public void testInvalidUserLogin() {
         // Navigate to the login page
-        driver.get("http://your-web-app-url/login");
+        driver.get("http://localhost:8080/login");
         // Fill in login form with invalid credentials
         driver.findElement(By.id("email")).sendKeys("nonexistent@example.com");
         driver.findElement(By.id("password")).sendKeys("invalidpassword");
@@ -56,7 +56,7 @@ public class WebAppTest {
     @Test
     public void testLogout() {
         // Assume user is already logged in
-        driver.get("http://your-web-app-url/dashboard");
+        driver.get("http://localhost:8080/dashboard");
         // Perform logout
         driver.findElement(By.id("logoutBtn")).click();
         // Verify redirection to the login page after logout
